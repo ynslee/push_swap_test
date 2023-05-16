@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:20:20 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/05/16 14:23:45 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/05/16 17:31:18 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	free_split_result(char **str_array)
 	str_array = NULL;
 }
 
-int	get_real_argv(t_ps *ps, char **argv)
+int	get_real_argv(t_ps *ps, int argc, char **argv)
 {
 	int		i;
 	int		j;
@@ -66,8 +66,8 @@ int	get_real_argv(t_ps *ps, char **argv)
 	char	**split_result;
 
 	i = 0;
-	j = 1;
-	while (i < ps->real_argc)
+	j = 0;
+	while (j < argc)
 	{
 		split_result = ft_split(argv[j++], ' ');
 		k = 0;
@@ -90,7 +90,7 @@ int	get_real_args(int argc, char **argv, t_ps *ps)
 		ps->real_argv = malloc((ps->real_argc + 1) * sizeof(char *));
 		if (!ps->real_argv)
 			return (0);
-		get_real_argv(ps, argv);
+		get_real_argv(ps, --argc, ++argv);
 	}
 	return (1);
 }

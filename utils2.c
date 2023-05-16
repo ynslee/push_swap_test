@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:05:03 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/05/16 15:05:29 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/05/16 17:27:40 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ void	free_char_array(t_ps *ps)
 
 	i = 0;
 
-	ft_printf("in free_char_array func\n");
 	while (i < ps->real_argc)
 	{
 		free(ps->real_argv[i]);

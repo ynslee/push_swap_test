@@ -6,7 +6,7 @@
 /*   By: yoonslee <yoonslee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 11:39:33 by yoonslee          #+#    #+#             */
-/*   Updated: 2023/05/16 14:23:52 by yoonslee         ###   ########.fr       */
+/*   Updated: 2023/05/16 17:32:14 by yoonslee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int			main(int argc, char **argv);
 int			ft_count_words(char *s, char c);
 int			get_real_argc(int argc, char **argv);
 void		free_split_result(char **str_array);
-int			get_real_argv(t_ps *ps, char **argv);
+int			get_real_argv(t_ps *ps, int argc, char **argv);
 int			get_real_args(int argc, char **argv, t_ps *ps);
 
 /*Check if args are number and not duplicates - check_argv.c*/
